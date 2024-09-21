@@ -36,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama_ahli_waris = $_POST['nama_ahli_waris'];
     $nik_ahli_waris = $_POST['nik_ahli_waris'];
     $hubungan = $_POST['hubungan'];
-    sfh
     
     // Handle upload file
     $foto_ktp = $_FILES['foto_ktp']['name'];
