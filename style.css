@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center; /* Center alignment untuk h1 */
+    color: #20836e;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container a {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #20836e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-container a:hover {
+    background-color: #1a634f;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Gabungkan margin dari form */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, input[type="text"], input[type="email"], input[type="number"], input[type="date"], input[type="file"] {
+    width: 100%;
+    padding: 10px; /* Gabungkan padding yang seragam */
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #20836e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #176653;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #20836e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #20836e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
