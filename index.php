@@ -14,7 +14,7 @@
         <a href="kota_kab.php">KOTA/KAB</a>
         <a href="kecamatan.php">KECAMATAN</a>
         <a href="kelurahan.php">KELURAHAN</a>
-        <a href="form_swakelola.php">FORM SWAKELOLA</a>
+        <a href="team_sc.html">FORM TEAM SC</a>
     </div>
 </body>
 </html>

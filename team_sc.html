@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Data</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS -->
+</head>
+<body>
+    <h1>Form Input Data</h1>
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+        <label for="username">Username (KHU):</label>
+        <input type="text" id="username" name="kode_khu" ><br>
+
+        <label for="nama_referensi">Nama Referensi:</label>
+        <input type="text" id="nama_referensi" name="nama_pemilik" ><br>
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="lembaga">Lembaga:</label>
+        <input type="text" id="lembaga" name="lembaga" required><br>
+
+        <label for="tempat_lahir">Tempat Lahir:</label>
+        <input type="text" id="tempat_lahir" name="tempat_lahir" required><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required><br>
+
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select><br>
+
+        <label for="nik">NIK:</label>
+        <input type="text" id="nik" name="nik" required><br>
+
+        <label for="agama">Agama:</label>
+        <input type="text" id="agama" name="agama" required><br>
+
+        <label for="pekerjaan">Pekerjaan:</label>
+        <input type="text" id="pekerjaan" name="pekerjaan" required><br>
+
+        <label for="no_hp_wa">No HP/WA:</label>
+        <input type="text" id="no_hp_wa" name="no_hp_wa" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="provinsi">Provinsi:</label>
+        <select id="provinsi" name="provinsi" required>
+            <!-- Data Provinsi akan diisi dengan PHP -->
+        </select><br>
+
+        <label for="kota_kab">Kota/Kab:</label>
+        <select id="kota_kab" name="kota_kab" required>
+            <!-- Data Kota/Kab akan diisi dengan PHP -->
+        </select><br>
+
+        <label for="kecamatan">Kecamatan:</label>
+        <select id="kecamatan" name="kecamatan" required>
+            <!-- Data Kecamatan akan diisi dengan PHP -->
+        </select><br>
+
+        <label for="kelurahan">Kelurahan:</label>
+        <select id="kelurahan" name="kelurahan" required>
+            <!-- Data Kelurahan akan diisi dengan PHP -->
+        </select><br>
+
+        <label for="rt_rw_no">RT/RW/No:</label>
+        <input type="text" id="rt_rw_no" name="rt_rw_no" required><br>
+
+        <label for="nama_ahli_waris">Nama Ahli Waris:</label>
+        <input type="text" id="nama_ahli_waris" name="nama_ahli_waris" required><br>
+
+        <label for="nik_ahli_waris">NIK Ahli Waris:</label>
+        <input type="text" id="nik_ahli_waris" name="nik_ahli_waris" required><br>
+
+        <label for="hubungan_ahli_waris">Hubungan Ahli Waris:</label>
+        <input type="text" id="hubungan_ahli_waris" name="hubungan_ahli_waris" required><br>
+
+        <label for="foto_ktp">Foto KTP:</label>
+        <input type="file" id="foto_ktp" name="foto_ktp" required><br>
+
+        <label for="foto_npwp">Foto NPWP:</label>
+        <input type="file" id="foto_npwp" name="foto_npwp" required><br>
+
+        <label for="foto_diri">Foto Diri:</label>
+        <input type="file" id="foto_diri" name="foto_diri" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function fetchReferensi(kodeKhu) {
+            if (kodeKhu.length === 0) {
+                document.getElementById("nama_referensi").value = "";
+                return;
+            }
+            
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "fetch_referensi.php?kode_khu=" + kodeKhu, true);
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    const response = JSON.parse(this.responseText);
+                    document.getElementById("nama_referensi").value = response.nama_pemilik || "Tidak ditemukan";
+                }
+            };
+            xhr.send();
+        }
+    </script>
+        
+</body>
+</html>
