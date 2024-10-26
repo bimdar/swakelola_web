@@ -16,6 +16,8 @@
         <a href="kelurahan.php">KELURAHAN</a>
         <a href="team_sc.html">FORM TEAM SC</a>
         <a href="form_swakelola.php">FORM SWAKELOLA</a>
+        <a href="form_mitra_seller.php">FORM MITRA SELLER</a>
+        <a href="form_kurir_mds.php">FORM KURIR MDS</a>
     </div>
 </body>
 </html>

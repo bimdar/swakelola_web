@@ -15,13 +15,13 @@ $result_khu = $conn->query($query_khu);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Input Data</title>
+    <title>Form Mitra Seller</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h2>Form Input Data</h2>
-    <form action="submit.php" method="post" enctype="multipart/form-data">
+    <h2>Form Mitra Seller</h2>
+    <form action="submit_mitra_seller.php" method="post" enctype="multipart/form-data">
         <!-- Dropdown untuk kode_khu dan nama_pemilik -->
         <label for="kode_khu">Kode KHU:</label>
         <select id="kode_khu" name="kode_khu" required>
@@ -41,12 +41,6 @@ $result_khu = $conn->query($query_khu);
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <label for="pekerjaan">Pekerjaan:</label>
-        <input type="text" id="pekerjaan" name="pekerjaan" required><br>
-
-        <label for="Lembaga">Lembaga:</label>
-        <input type="text" id="Lembaga" name="Lembaga" required><br>
-
         <label for="tempat_lahir">Tempat Lahir:</label>
         <input type="text" id="tempat_lahir" name="tempat_lahir" required><br>
 
@@ -62,14 +56,18 @@ $result_khu = $conn->query($query_khu);
         <label for="nik">NIK:</label>
         <input type="text" id="nik" name="nik" required><br>
 
-        <label for="agama">Agama:</label>
-        <input type="text" id="agama" name="agama" required><br>
-
         <label for="no_hp_wa">No. HP/WA:</label>
         <input type="text" id="no_hp_wa" name="no_hp_wa" required><br>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br>
+
+        <!-- Data toko -->
+        <label for="nama_toko">Nama Toko:</label>
+        <input type="text" id="nama_toko" name="nama_toko" required><br>
+
+        <label for="produk_utama">Produk Utama:</label>
+        <input type="text" id="produk_utama" name="produk_utama" required><br>
 
         <!-- Dropdown Provinsi, Kota/Kab, Kecamatan, Kelurahan -->
         <label for="id_provinsi">Provinsi:</label>
@@ -98,16 +96,6 @@ $result_khu = $conn->query($query_khu);
         <label for="rt_rw_no">RT/RW/No:</label>
         <input type="text" id="rt_rw_no" name="rt_rw_no" required><br>
 
-        <!-- Ahli Waris -->
-        <label for="nama_ahli_waris">Nama Ahli Waris:</label>
-        <input type="text" id="nama_ahli_waris" name="nama_ahli_waris" required><br>
-
-        <label for="nik_ahli_waris">NIK Ahli Waris:</label>
-        <input type="text" id="nik_ahli_waris" name="nik_ahli_waris" required><br>
-
-        <label for="hubungan_ahli_waris">Hubungan Ahli Waris:</label>
-        <input type="text" id="hubungan_ahli_waris" name="hubungan_ahli_waris" required><br>
-
         <!-- Foto upload -->
         <label for="foto_npwp">Foto NPWP:</label>
         <input type="file" id="foto_npwp" name="foto_npwp" required><br>
@@ -115,8 +103,8 @@ $result_khu = $conn->query($query_khu);
         <label for="foto_ktp">Foto KTP:</label>
         <input type="file" id="foto_ktp" name="foto_ktp" required><br>
 
-        <label for="foto_diri">Foto Diri:</label>
-        <input type="file" id="foto_diri" name="foto_diri" required><br>
+        <label for="foto_logo_toko">Foto Logo Toko:</label>
+        <input type="file" id="foto_logo_toko" name="foto_logo_toko" required><br>
 
         <button type="submit">Submit</button>
     </form>
